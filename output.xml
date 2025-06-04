@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-07T11:51:01.878588" rpa="false" schemaversion="5">
+<suite id="s1" name="CreateUser" source="C:\Users\Zeba patel\PycharmProjects\CreateUser">
+<suite id="s1-s1" name="TestCases" source="C:\Users\Zeba patel\PycharmProjects\CreateUser\TestCases">
+<suite id="s1-s1-s1" name="Create New User TestCase" source="C:\Users\Zeba patel\PycharmProjects\CreateUser\TestCases\Create_New_User_TestCase.robot">
+<test id="s1-s1-s1-t1" name="Verify that new user is created" line="16">
+<kw name="Open The Browser With The Mortgage Payment Url" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:02.389856" level="INFO">Opening browser 'Chrome' to base url 'https://test.legacyconsole.gozwing.com/admin'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:51:02.389608" elapsed="4.573678"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-07T11:51:06.963843" elapsed="0.039021"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:02.388886" elapsed="4.614171"/>
+</kw>
+<kw name="Fetch Testdata By Id" owner="utilities">
+<msg time="2025-05-07T11:51:07.014694" level="INFO">${data} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${data}</var>
+<arg>${file_path}</arg>
+<arg>TC_101</arg>
+<status status="PASS" start="2025-05-07T11:51:07.004032" elapsed="0.011091"/>
+</kw>
+<kw name="Enter Username" owner="login_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:07.017136" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.016613" elapsed="0.000572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_text_box}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.017650" elapsed="0.031409"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:07.049562" level="INFO">Clicking element '//input[@id="emailInput"]'.</msg>
+<arg>${username_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.049297" elapsed="0.098658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:07.150615" level="INFO">Typing text 'aditya.wagh2@indexnine.com' into text field '//input[@id="emailInput"]'.</msg>
+<arg>${username_text_box}</arg>
+<arg>${my_dict.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.149003" elapsed="0.112552"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:07.016000" elapsed="0.245735"/>
+</kw>
+<kw name="Enter Password" owner="login_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:07.263016" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.262643" elapsed="0.000427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password_text_box}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.263243" elapsed="0.017360"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:07.281479" level="INFO">Clicking element '//input[@id="passwordInput"]'.</msg>
+<arg>${password_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.280917" elapsed="0.055956"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:07.338266" level="INFO">Typing text 'Quiz@123' into text field '//input[@id="passwordInput"]'.</msg>
+<arg>${password_text_box}</arg>
+<arg>${my_dict.Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.337150" elapsed="0.063097"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:07.262203" elapsed="0.138208"/>
+</kw>
+<kw name="Click On Continue Button" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${continue_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.401467" elapsed="0.016656"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:07.418544" level="INFO">Clicking element '//button[@id="continueBtn"]'.</msg>
+<arg>${continue_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.418312" elapsed="0.057847"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:07.400828" elapsed="0.075491"/>
+</kw>
+<kw name="Verify User Can Redirect To Dashboard" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dashboard_page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:07.477561" elapsed="2.368379"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:07.476979" elapsed="2.369274"/>
+</kw>
+<kw name="Click On Settings Icon" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${setting_icon}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:09.847566" elapsed="0.019474"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:09.867592" level="INFO">Simulating Mouse Over on element '//ul[@class="sidebar-menu tree"]/li[@class="treeview"]//i[@class="fa fa-fw fa-gear "]'.</msg>
+<arg>${setting_icon}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:09.867292" elapsed="0.295647"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:09.847005" elapsed="0.316166"/>
+</kw>
+<kw name="Select 'Users' From DropDownList" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:10.164387" elapsed="0.017200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:10.182151" level="INFO">Clicking element '//ul[@class="treeview-menu"]//a[@href="https://test.legacyconsole.gozwing.com/admin/staff/view"]'.</msg>
+<arg>${user_text}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:10.181852" elapsed="2.826680"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:10.163826" elapsed="2.844871"/>
+</kw>
+<kw name="Verify User Can Redirect To User Page" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user_page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:13.009811" elapsed="0.020145"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:13.009201" elapsed="0.021053"/>
+</kw>
+<kw name="Click On +New User Button" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_user_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:13.030934" elapsed="0.017763"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:13.049248" level="INFO">Clicking element '//button[@class="btn btn-primary" and text()="+ New User"]'.</msg>
+<arg>${new_user_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:13.048980" elapsed="0.337476"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:13.030662" elapsed="0.355924"/>
+</kw>
+<kw name="Verify User Can Redirect To New User Page" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_user_page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:13.387289" elapsed="2.693411"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:13.387017" elapsed="2.693818"/>
+</kw>
+<kw name="Click On Select Store" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_store_check_btn}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:16.081556" elapsed="0.024051"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:16.106344" level="INFO">Clicking element '(//label[@class="checkbtn fs-13"])[2]'.</msg>
+<arg>${select_store_check_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:16.105837" elapsed="0.968722"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:16.081268" elapsed="0.993443"/>
+</kw>
+<kw name="Select Assign Role" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${assign_role_drop_down}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.075597" elapsed="0.024677"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.100663" level="INFO">Clicking element '//div[@class="multiselect__tags"]'.</msg>
+<arg>${assign_role_drop_down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.100446" elapsed="0.065257"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:17.075221" elapsed="0.090620"/>
+</kw>
+<kw name="Select 'Cashier' Option From Assign Role Drop Down" owner="Create_New_User_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cashier_option}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.166514" elapsed="0.243016"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.409997" level="INFO">Clicking element '//ul[@id="listbox-null"]/li[@id="null-1"]//span[text()="Cashier"]'.</msg>
+<arg>${cashier_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.409703" elapsed="0.105502"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:17.166225" elapsed="0.349093"/>
+</kw>
+<kw name="Enter First Name" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:17.516732" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.516325" elapsed="0.000443"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${first_name_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.516926" elapsed="0.023980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.541372" level="INFO">Clicking element '//input[@placeholder="First Name"]'.</msg>
+<arg>${first_name_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.541085" elapsed="0.067249"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.610597" level="INFO">Typing text 'adityaa' into text field '//input[@placeholder="First Name"]'.</msg>
+<arg>${first_name_text_box}</arg>
+<arg>${my_dict.FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.608551" elapsed="0.089367"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:17.515895" elapsed="0.182130"/>
+</kw>
+<kw name="Enter Last Name" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:17.698946" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.698720" elapsed="0.000256"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${last_name_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.699083" elapsed="0.016089"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.715586" level="INFO">Clicking element '//input[@placeholder="Last Name"]'.</msg>
+<arg>${last_name_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.715361" elapsed="0.053168"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.769739" level="INFO">Typing text 'wagh' into text field '//input[@placeholder="Last Name"]'.</msg>
+<arg>${last_name_text_box}</arg>
+<arg>${my_dict.LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.768788" elapsed="0.068771"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:17.698403" elapsed="0.139262"/>
+</kw>
+<kw name="Enter Username As Email" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:17.838597" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.838375" elapsed="0.000253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.838738" elapsed="0.015778"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.854908" level="INFO">Clicking element '//div/input[@placeholder="User Name"]'.</msg>
+<arg>${username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.854699" elapsed="0.056155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:17.912910" level="INFO">Typing text 'aditya.wagh25@gmail.com' into text field '//div/input[@placeholder="User Name"]'.</msg>
+<arg>${username}</arg>
+<arg>${my_dict.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:17.911552" elapsed="0.162958"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:17.838039" elapsed="0.236606"/>
+</kw>
+<kw name="Enter Email Id" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.075764" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.075369" elapsed="0.000444"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${email_id_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.076016" elapsed="0.015145"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.091629" level="INFO">Clicking element '//input[@placeholder="Email"]'.</msg>
+<arg>${email_id_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.091423" elapsed="0.053468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.146217" level="INFO">Typing text 'aditya.wagh25@gmail.com' into text field '//input[@placeholder="Email"]'.</msg>
+<arg>${email_id_text_box}</arg>
+<arg>${my_dict.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.145256" elapsed="0.143803"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.075039" elapsed="0.214148"/>
+</kw>
+<kw name="Enter Phone Number" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.290143" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.289923" elapsed="0.000251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${phone_no_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.290282" elapsed="0.015722"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.306437" level="INFO">Clicking element '//input[@placeholder="Phone"]'.</msg>
+<arg>${phone_no_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.306222" elapsed="0.050978"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.360351" level="INFO">Typing text '8596945892' into text field '//input[@placeholder="Phone"]'.</msg>
+<arg>${phone_no_text_box}</arg>
+<arg>${my_dict.Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.358226" elapsed="0.116047"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.289594" elapsed="0.184881"/>
+</kw>
+<kw name="Re-Enter Password" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.476691" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.476104" elapsed="0.000650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${pass_text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.476978" elapsed="0.019246"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.497157" level="INFO">Clicking element '//div/input[@placeholder="Password"]'.</msg>
+<arg>${pass_text}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.496472" elapsed="0.054218"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.552035" level="INFO">Typing text 'Quiz@123' into text field '//div/input[@placeholder="Password"]'.</msg>
+<arg>${pass_text}</arg>
+<arg>${my_dict.Pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.551088" elapsed="0.079097"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.475133" elapsed="0.155189"/>
+</kw>
+<kw name="Confirm Password By Re-Entering Password" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.631337" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.631115" elapsed="0.000253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm_pass_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.631482" elapsed="0.016576"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.648431" level="INFO">Clicking element '//input[@placeholder="Confirm Password"]'.</msg>
+<arg>${confirm_pass_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.648230" elapsed="0.060737"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.711221" level="INFO">Typing text 'Quiz@123' into text field '//input[@placeholder="Confirm Password"]'.</msg>
+<arg>${confirm_pass_text_box}</arg>
+<arg>${my_dict.Pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.709242" elapsed="0.079635"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.630800" elapsed="0.158185"/>
+</kw>
+<kw name="Enter Employee Code" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.789872" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.789654" elapsed="0.000250"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${employee_code_text_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.790014" elapsed="0.014540"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.804945" level="INFO">Clicking element '//input[@placeholder="Enter Employee Code"]'.</msg>
+<arg>${employee_code_text_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.804734" elapsed="0.053569"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.860985" level="INFO">Typing text '52659' into text field '//input[@placeholder="Enter Employee Code"]'.</msg>
+<arg>${employee_code_text_box}</arg>
+<arg>${my_dict.Code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.858628" elapsed="0.071332"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.789345" elapsed="0.140722"/>
+</kw>
+<kw name="Scroll Down" owner="Create_New_User_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.931108" level="INFO">Executing JavaScript:
+window.scrollBy(0,500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.930745" elapsed="0.004727"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${store_search_box}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.935646" elapsed="0.025519"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:18.930485" elapsed="0.030956"/>
+</kw>
+<kw name="Enter Store Code" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:18.963577" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.962922" elapsed="0.000714"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:18.964205" level="INFO">Clicking element '//div[@class="search-box pr-0 w-100"]/input[@class="form-control input-sm"]'.</msg>
+<arg>${store_search_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:18.963893" elapsed="0.065546"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:19.030575" level="INFO">Typing text 'F01' into text field '//div[@class="search-box pr-0 w-100"]/input[@class="form-control input-sm"]'.</msg>
+<arg>${store_search_box}</arg>
+<arg>${my_dict.Store_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:19.029690" elapsed="0.069205"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:18.962289" elapsed="0.136725"/>
+</kw>
+<kw name="Verify Entered Store Code Exists" owner="Create_New_User_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-07T11:51:19.100186" level="INFO">${my_dict} = {'TC_ID': 'TC_101', 'Username': 'aditya.wagh2@indexnine.com', 'Password': 'Quiz@123', 'LastName': 'wagh', 'FirstName': 'adityaa', 'Email': 'aditya.wagh25@gmail.com', 'Phone': 8596945892, 'Pass': 'Quiz...</msg>
+<var>${my_dict}</var>
+<arg>&amp;{my_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-07T11:51:19.099857" elapsed="0.000376"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-05-07T11:51:19.101500" level="INFO">${code_text} = //tr[@role="row"]/td[@role="cell" and text()=F01]</msg>
+<var>${code_text}</var>
+<arg>${selected_store_code}</arg>
+<arg>Swap</arg>
+<arg>${my_dict.Store_code}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-05-07T11:51:19.100522" elapsed="0.001047"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:51:21.102699" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:51:19.101787" elapsed="2.001180"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:21.103991" level="INFO">Clicking element '//tr[@role="row"]/td[@aria-colindex="1"]/input[@class="form-input-check float-none"]'.</msg>
+<arg>${check_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:21.103417" elapsed="0.102295"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-05-07T11:51:19.099487" elapsed="2.106414"/>
+</kw>
+<kw name="Click On Save Button" owner="Create_New_User_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:51:23.207701" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:51:21.206666" elapsed="2.001308"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${new_user_page}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-07T11:51:23.208562" elapsed="0.309291"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${save_btn}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:23.518276" elapsed="0.035950"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:23.554641" level="INFO">Clicking element '//div[@class="col-md-8"]/button[@class="btn btn-primary pull-right"]'.</msg>
+<arg>${save_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:23.554442" elapsed="0.149034"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:21.206357" elapsed="2.497238"/>
+</kw>
+<kw name="Verify New User Is Generated" owner="Create_New_User_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:51:25.704882" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:51:23.704400" elapsed="2.000768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user_text_page}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-07T11:51:25.705599" elapsed="1.126611"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:51:31.833387" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:51:26.832406" elapsed="5.001242"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:51:31.976711" level="INFO">${generated_username} = aditya.wagh25@gmail.com</msg>
+<var>${generated_username}</var>
+<arg>${verify_username}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:51:31.834039" elapsed="0.142722"/>
+</kw>
+<return>
+<value>${generated_username}</value>
+<status status="PASS" start="2025-05-07T11:51:31.976852" elapsed="0.000091"/>
+</return>
+<msg time="2025-05-07T11:51:31.977099" level="INFO">${username} = aditya.wagh25@gmail.com</msg>
+<var>${username}</var>
+<status status="PASS" start="2025-05-07T11:51:23.704017" elapsed="8.273114"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-07T11:51:31.977606" level="INFO">aditya.wagh25@gmail.com</msg>
+<arg>${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-07T11:51:31.977447" elapsed="0.000310"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:51:31.978071" elapsed="2.243165"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:51:02.388158" elapsed="31.833767"/>
+</test>
+<doc>Verify Registration functionality of Automation Exercise</doc>
+<status status="PASS" start="2025-05-07T11:51:01.915036" elapsed="32.308924"/>
+</suite>
+<status status="PASS" start="2025-05-07T11:51:01.913720" elapsed="32.312770"/>
+</suite>
+<status status="PASS" start="2025-05-07T11:51:01.880270" elapsed="32.347970"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="CreateUser" id="s1" pass="1" fail="0" skip="0">CreateUser</stat>
+<stat name="TestCases" id="s1-s1" pass="1" fail="0" skip="0">CreateUser.TestCases</stat>
+<stat name="Create New User TestCase" id="s1-s1-s1" pass="1" fail="0" skip="0">CreateUser.TestCases.Create New User TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
